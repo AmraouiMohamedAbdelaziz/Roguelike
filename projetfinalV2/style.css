@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    text-align: center;
+    height: 550px;
+    overflow: hidden;
+}
+#main{
+    margin: auto;
+    padding: auto;
+    height: 100vh;
+    width: 100%;
+    
+}
+#main table{
+    width: auto;
+    height: 500px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 0px 80px 60px rgba(0, 255, 255, 0.2) ;
+}
+td{
+    position: relative;
+    border: none;
+    color: transparent;
+    overflow: visible;
+    padding: 0;
+
+    
+}
+td img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+}
+
+.chemin{
+    height: 24px;
+    width: 24px;
+    z-index: 2;
+    
+    
+}
+@keyframes animationJoueur {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 0%;
+        
+    }
+    50%{
+        opacity: 100%; 
+
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.mur{
+    background-color: rgba(0, 255, 255, 0.2);
+    height: 24px;
+    width: 24px;
+}
+.joueur{
+    background:url(images/Cartoon_green_texture_grass.jpg) center;
+    background-size: contain;
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.299);
+    height: 24px;
+    width: 24px;
+}
+
+.joueurEntre{
+    animation:animationJoueur 2s infinite;
+}
+
+.tresor{
+    background:url(images/Cartoon_green_texture_grass.jpg) center;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    z-index: 99;
+    
+}
+@keyframes animationTresore {
+    0%{
+        transform: scale(1.5) rotate(45deg);
+         
+    }
+   
+    50%{
+        transform: scale(2) rotate(-45deg);; 
+    }
+    
+    100%{
+        transform: scale(1.5) rotate(45deg);
+    }
+}
+#monstreImg{
+    transform: scale(1.5);
+}
+.monstre{
+   background-image: url(images/Cartoon_green_texture_grass.jpg);
+    height: 24px;
+    width: 24px;
+    z-index: 99;
+}
+
+.resultatmessage{
+    display: none;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.299);
+    z-index: 99;
+    color: white;
+    font-size: 5em;
+    text-shadow: 10px 5px 10px rgba(255, 0, 0, 0.368) , 10px 5px 10px rgba(255, 166, 0, 0.368); 
+}
+#bouttonmain{
+    position: sticky;
+    background: #ff27b780;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #FF27B6, aqua);
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 80%;
+}
+img{
+    width: 400px;
+}
+button {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(45deg, #FF27B6, aqua);
+    color: white;
+    font-weight: bolder;
+    border-radius: 100px;
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+    bottom: 100px;
+    
+}
+
+button:hover {
+    background: linear-gradient(45deg, aqua, #FF27B6); 
+}
+#tresores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#imgtr{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    z-index: 99;
+
+}
+#tresorimg{
+    animation:animationTresore 2s infinite; 
+}
+#jou{
+    transform: scale(1.5);
+    z-index: 99;
+}
